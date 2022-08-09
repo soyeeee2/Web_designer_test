@@ -1,0 +1,78 @@
+/* nomalize */
+html{
+  background-color: #ffffff;
+  color: #333333;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+  display: block;
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul, li{
+  list-style: none;
+}
+/* lib */
+.con{
+  width: 1200px;
+  margin: 0 auto;
+}
+.text{
+  text-align: center;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.self-center{
+  align-self: center;
+}
+.flex-grow{
+  flex-grow: 1;
+}
+/* style */
+header{
+  background-color: skyblue;
+  height: 100px;
+}
+header img{
+  width: 200px;
+  height: 40px;
+}
+.menu01 > li:hover > a,
+.menu02 > li:hover > a{
+  background-color: lightpink;
+  color: white;
+}
+.menu01 > li > a{
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.menu01 .menu02 > li > a{
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu02{
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.menu01:hover .menu02{
+  height: 200px;
+  position: absolute;
+}
