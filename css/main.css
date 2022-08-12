@@ -1,12 +1,7 @@
-@charset "utf-8";
-
 /* nomalize */
 html{
   background-color: #ffffff;
   color: #333333;
-}
-html > body{
-  font-family: "맑은 고딕";
 }
 *{
   margin: 0;
@@ -15,6 +10,7 @@ html > body{
 }
 img{
   display: block;
+  width: 100%;
 }
 a{
   text-decoration: none;
@@ -33,15 +29,8 @@ ul, li{
 }
 .flex{
   display: flex;
-}
-.justify{
   justify-content: center;
-}
-.align{
-  align-items: center;  
-}
-.flex-shrink{
-  flex-shrink: 0;
+  align-items: center;
 }
 .self-center{
   align-self: center;
@@ -49,11 +38,7 @@ ul, li{
 .flex-grow{
   flex-grow: 1;
 }
-.flex-col{
-  flex-direction: column;
-}
 /* style */
-/* header */
 header{
   background-color: skyblue;
   height: 100px;
@@ -62,18 +47,10 @@ header img{
   width: 200px;
   height: 40px;
 }
-.menu01{
-  position: relative;
-  z-index: 999;
-}
-.menu01 > li:hover > a{
-  background-color: pink;
-  color: white;
-}
+.menu01 > li:hover > a,
 .menu02 > li:hover > a{
-  background-color: pink;
+  background-color: lightpink;
   color: white;
-  opacity: 0.7;
 }
 .menu01 > li > a{
   width: 150px;
@@ -82,7 +59,6 @@ header img{
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 18px;
 }
 .menu01 .menu02 > li > a{
   width: 150px;
@@ -92,85 +68,11 @@ header img{
   justify-content: center;
 }
 .menu02{
-  background-color: skyblue;
   height: 0;
   overflow: hidden;
-  transition: .5s;
-  position: absolute;
+  transition: 0.3s;
 }
 .menu01:hover .menu02{
   height: 200px;
-}
-
-/* slider */
-.slider{
-  height: 300px;
-  overflow: hidden;
-}
-.slider > .slides{
-  transition: .3s;
-}
-.slider[data-index="0"] > .slides{
-  margin-top: 0;
-}
-.slider[data-index="1"] > .slides{
-  margin-top: -300px;
-}
-.slider[data-index="2"] > .slides{
-  margin-top: -600px;
-}
-
-/* content-wrap */
-.content-wrap{
-  height: 200px; 
-}
-.content-wrap > .tab-box,
-.content-wrap > .banner-box,
-.content-wrap > .direct-box{
-  width: 400px;
-  height: 100%;
-  position: relative;
-}
-.content-wrap > .banner-box > p,
-.content-wrap > .direct-box > p{
-  padding: 5px 10px;
-  background-color: #fff;
-  font-weight: bold;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* tab-box */
-.tab-box{
-  justify-content: flex-start;
-}
-.tab-box .tab-box-head > li > a{
-  font-size: 20px;
-  font-weight: 600;
-  padding: 10px;
-}
-.tab-box .tab-box-body{
-  width: 100%;
-  height: 100%;
-  background-color: pink;
-}
-.tab-box .tab-box-body > li{
-  display: none;
-}
-.tab-box .tab-box-body > li.active{
-  display: block;
-}
-.tab-box .tab-box-head > li.active{
-  background-color: pink;
-}
-.tab-box .notice-list > ul > li > a{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 10px;
-}
-.tab-box .notice-list > ul > li:hover > a{
-  text-decoration: underline;
-  color: gray;
 }
