@@ -35,6 +35,9 @@ img{
 .flex-col{
   flex-direction: column;
 }
+.flex-grow{
+  flex-grow: 1;
+}
 .align{
   align-items: center;
 }
@@ -53,6 +56,18 @@ header{
   height: 100px;
   justify-content: space-between;
   background-color: skyblue;
+  position: relative;
+}
+.menu-wrap .menu-bg{
+  position:absolute;
+  left:0;
+  background-color: skyblue;
+  height:0;
+  width: 100%;
+  transition: 0.5s;
+}
+.menu-wrap:hover .menu-bg{
+  height: 200px;
 }
 .main > li > a,
 .sub > li > a,
@@ -160,7 +175,47 @@ header{
 }
 .tab-box .body > li{
   display: none;
+  height: 100%;
+}
+.tab-box .body > li > ul{
+  height: 100%;
 }
 .tab-box .body > li.active{
   display: block;
+}
+.tab-box .body .notice > ul > li > a{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.tab-box .body .gallery > ul > li img{
+  width: 100px;
+  margin: 10px;
+}
+/* popup */
+.popup{
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 20px;
+  display: none;
+}
+.popup > *{
+  margin: 10px 0;
+}
+/* footer */
+footer{
+  height: 100px;
+  justify-content: space-between;
+}
+.sns-wrap > a > img{
+  width: 50px;
+  margin: 5px;
+  border-radius: 10px;
 }
