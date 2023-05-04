@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+/* nomalize */
+html{
+  background-color: #ffffff;
+  color: #333333;
+}
+html > body{
+  font-family: "맑은 고딕";
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul, li{
+  list-style: none;
+}
+img{
+  width: 100%;
+  display: block;
+}
+/* lib */
+.con{
+  width: 1200px;
+  margin: 0 auto;
+}
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.flex-grow{
+  flex-grow: 1;
+}
+.align{
+  align-items: center;
+}
+.justify{
+  justify-content: center;
+}
+.justify-self{
+  justify-self: center;
+}
+.BG{
+  background-color: red;
+}
+/* style */
+/* header */
+header{
+  height: 100px;
+  justify-content: space-between;
+  background-color: skyblue;
+  position: relative;
+}
+.menu-wrap .menu-bg{
+  position:absolute;
+  left:0;
+  background-color: skyblue;
+  height:0;
+  width: 100%;
+  transition: 0.5s;
+}
+.menu-wrap:hover .menu-bg{
+  height: 200px;
+}
+.main > li > a,
+.sub > li > a,
+.sub > li > p{
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: skyblue;
+}
+.main > li > a{
+  font-size: 20px;
+  font-weight: 600;
+}
+.main > li:hover > a,
+.sub > li:hover > a{
+  background-color: pink;
+  color: #ffffff;
+}
+.main{
+  position: relative;
+  z-index: 999;
+}
+.main .sub{
+  height: 0;
+  position: absolute;
+  transition: .5s;
+  overflow: hidden;
+}
+.main:hover .sub{
+  height: 200px;
+}
+/* slider */
+.slider{
+  height: 300px;
+  overflow: hidden;
+}
+.slider > .slides{
+  transition: .3s;
+}
+.slider > .slides > a{
+  position: relative;
+  display: block;
+}
+.slider > .slides > a > p{
+  padding: 5px 10px;
+  background-color: pink;
+  position: absolute;
+}
+.slider[data-index="0"] > .slides{
+  margin-top: 0;
+}
+.slider[data-index="1"] > .slides{
+  margin-top: -300px;
+}
+.slider[data-index="2"] > .slides{
+  margin-top: -600px;
+}
+/* contents */
+.contents{
+  height: 200px;
+}
+.contents > *{
+  width: 400px;
+}
+.contents > a{
+  position: relative;
+}
+.contents > a > p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 10px;
+  background-color: pink;
+  font-weight: 600;
+}
+/* tab-box */
+.tab-box{
+  height: 200px;
+}
+.tab-box .head li{
+  width: 70px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-box .head li.active{
+  background-color: pink;
+}
+.tab-box .head li:hover{
+  color: gray;
+  text-decoration: underline;
+}
+.tab-box .body{
+  background-color: pink;
+  display: block;
+  height: 170px;
+}
+.tab-box .body .notice a:hover{
+  color: gray;
+  text-decoration: underline;
+}
+.tab-box .body > li{
+  display: none;
+  height: 100%;
+}
+.tab-box .body > li > ul{
+  height: 100%;
+}
+.tab-box .body > li.active{
+  display: block;
+}
+.tab-box .body .notice > ul > li > a{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.tab-box .body .gallery > ul > li img{
+  width: 100px;
+  margin: 10px;
+}
+/* popup */
+.popup{
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 20px;
+  display: none;
+}
+.popup > *{
+  margin: 10px 0;
+}
+/* footer */
+footer{
+  height: 100px;
+  justify-content: space-between;
+}
+.sns-wrap > a > img{
+  width: 50px;
+  margin: 5px;
+  border-radius: 10px;
+}
